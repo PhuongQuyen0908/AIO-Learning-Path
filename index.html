@@ -1,28 +1,298 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 
 <head>
   <meta charset="UTF-8">
-  <title>Machine Learning for Beginners</title>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="description" content="Introduction to Machine Learning for Beginners">
-  <meta name="viewport"
-    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
-  <link rel="icon" type="image/png" href="images/favicon.png">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Learning Hub - Team Project</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    header {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-radius: 15px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    h1 {
+      color: #2c3e50;
+      margin-bottom: 10px;
+      font-size: 2.5em;
+      font-weight: 700;
+    }
+
+    .subtitle {
+      color: #7f8c8d;
+      font-size: 1.2em;
+      margin-bottom: 20px;
+    }
+
+    .team-info {
+      background: rgba(52, 152, 219, 0.1);
+      padding: 15px;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    .main-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+      margin-bottom: 30px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-radius: 15px;
+      padding: 25px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .card-icon {
+      font-size: 3em;
+      margin-bottom: 15px;
+      display: block;
+    }
+
+    .card h3 {
+      color: #2c3e50;
+      margin-bottom: 15px;
+      font-size: 1.4em;
+    }
+
+    .card p {
+      color: #666;
+      margin-bottom: 15px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: linear-gradient(45deg, #3498db, #2980b9);
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 25px;
+      transition: all 0.3s ease;
+      font-weight: 600;
+    }
+
+    .btn:hover {
+      background: linear-gradient(45deg, #2980b9, #1f5f8b);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .progress-section {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-radius: 15px;
+      padding: 25px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    }
+
+    .progress-item {
+      margin-bottom: 20px;
+    }
+
+    .progress-label {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 5px;
+      font-weight: 600;
+    }
+
+    .progress-bar {
+      width: 100%;
+      height: 10px;
+      background: #ecf0f1;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(45deg, #27ae60, #2ecc71);
+      border-radius: 5px;
+      transition: width 0.3s ease;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding: 20px;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .team-members {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin-top: 15px;
+    }
+
+    .member {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 10px;
+      border-radius: 8px;
+      text-align: center;
+    }
+  </style>
 </head>
 
 <body>
-  <div id="app"></div>
+  <div class="container">
+    <header>
+      <h1>🤖 AI Learning Hub</h1>
+      <p class="subtitle">Hành trình khám phá Machine Learning & AI của nhóm chúng tôi</p>
+
+      <div class="team-info">
+        <h3>👥 Thành viên nhóm</h3>
+        <div class="team-members">
+          <div class="member">
+            <strong>Thành viên 1</strong>
+            <div>Frontend & UI/UX</div>
+          </div>
+          <div class="member">
+            <strong>Thành viên 2</strong>
+            <div>Backend & API</div>
+          </div>
+          <div class="member">
+            <strong>Thành viên 3</strong>
+            <div>ML & Data Science</div>
+          </div>
+          <div class="member">
+            <strong>Thành viên 4</strong>
+            <div>DevOps & Deploy</div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="main-content">
+      <div class="card">
+        <span class="card-icon">📚</span>
+        <h3>Tài liệu học tập</h3>
+        <p>Tổng hợp notes, tutorials và resources mà nhóm đã học</p>
+        <a href="team-notes/" class="btn">Xem Notes</a>
+      </div>
+
+      <div class="card">
+        <span class="card-icon">🚀</span>
+        <h3>Projects của nhóm</h3>
+        <p>Các dự án AI/ML mà nhóm đã và đang thực hiện</p>
+        <a href="team-projects/" class="btn">Xem Projects</a>
+      </div>
+
+      <div class="card">
+        <span class="card-icon">🧠</span>
+        <h3>ML Learning Path</h3>
+        <p>Lộ trình học Machine Learning từ cơ bản đến nâng cao</p>
+        <a href="1-Introduction/" class="btn">Bắt đầu học</a>
+      </div>
+
+      <div class="card">
+        <span class="card-icon">📊</span>
+        <h3>Resources & Tools</h3>
+        <p>Datasets, công cụ và tài nguyên hữu ích cho AI/ML</p>
+        <a href="resources/" class="btn">Khám phá</a>
+      </div>
+    </div>
+
+    <div class="progress-section">
+      <h3>📈 Tiến độ học tập của nhóm</h3>
+
+      <div class="progress-item">
+        <div class="progress-label">
+          <span>Introduction to Machine Learning</span>
+          <span>100%</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: 100%"></div>
+        </div>
+      </div>
+
+      <div class="progress-item">
+        <div class="progress-label">
+          <span>Regression Techniques</span>
+          <span>75%</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: 75%"></div>
+        </div>
+      </div>
+
+      <div class="progress-item">
+        <div class="progress-label">
+          <span>Classification Algorithms</span>
+          <span>50%</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: 50%"></div>
+        </div>
+      </div>
+
+      <div class="progress-item">
+        <div class="progress-label">
+          <span>Deep Learning</span>
+          <span>25%</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: 25%"></div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>🎯 Mục tiêu: Trở thành AI Engineers trong 6 tháng tới!</p>
+      <p>📅 Cập nhật lần cuối: <span id="lastUpdate"></span></p>
+    </footer>
+  </div>
+
   <script>
-    window.$docsify = {
-      name: 'Machine Learning for Beginners',
-      repo: 'https://github.com/Microsoft/ML-For-Beginners',
-      relativePath: true,
-      auto2top: true,
-    }
+    // Cập nhật ngày tự động
+    document.getElementById('lastUpdate').textContent = new Date().toLocaleDateString('vi-VN');
+
+    // Animation cho progress bars
+    window.addEventListener('load', function () {
+      const progressBars = document.querySelectorAll('.progress-fill');
+      progressBars.forEach(bar => {
+        const width = bar.style.width;
+        bar.style.width = '0%';
+        setTimeout(() => {
+          bar.style.width = width;
+        }, 500);
+      });
+    });
   </script>
-  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
 </body>
 
 </html>
